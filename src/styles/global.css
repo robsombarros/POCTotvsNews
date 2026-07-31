@@ -1,0 +1,164 @@
+:root {
+  /* Spacing scale (Figma spacing tokens) */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-2xl: 48px;
+  --spacing-4xl: 64px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 8px;
+  --radius-card: 16px;
+  --radius-full: 9999px;
+
+  /* Font sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-default: 16px;
+  --font-md: 20px;
+  --font-lg: 30px;
+  --font-xl: 36px;
+  --font-3xl: 48px;
+
+  /* Colors */
+  --color-navy: #1d293d;
+  --color-navy-deep: #0f172b;
+  --color-orange: #ff6900;
+  --color-orange-accent: #ff8904;
+  --color-on-dark: #f6fafe;
+  --color-heading: #1d293d;
+  --color-body: #4a5565;
+  --color-body-soft: #6a7282;
+  --color-link: #155dfc;
+  --color-surface: #f6fafe;
+  --color-surface-alt: #f9f9fa;
+  --color-didyouknow-bg: #c3d0e1;
+  --color-card-border: rgba(0, 0, 0, 0.1);
+  --color-case-circle: #efefef;
+  --color-case-label: #364153;
+  --color-slate-700: #314158;
+  --color-slate-300: #99a1af;
+  --color-blue-100: #dbeafe;
+  --color-gray-200: #e5e7eb;
+
+  /* Overlays */
+  --overlay-navy: rgba(30, 41, 59, 0.8);
+  --overlay-blue: rgba(21, 93, 252, 0.8);
+
+  /* Layout */
+  --container-max: 1280px;
+
+  --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-body);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* Shared layout helpers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--spacing-lg);
+  padding-right: var(--spacing-lg);
+}
+
+/* Primary orange CTA button */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  background: var(--color-orange);
+  color: var(--color-on-dark);
+  font-weight: 500;
+  border-radius: var(--radius-lg);
+  transition: filter 0.15s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--color-orange-accent);
+  outline-offset: 2px;
+}
+
+/* Sizes for the CTA */
+.btn-lg {
+  height: 40px;
+  padding: 12px var(--spacing-lg);
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn-md {
+  height: 40px;
+  padding: 12px var(--spacing-lg);
+  font-size: var(--font-sm);
+  line-height: 20px;
+}
+
+.btn-sm {
+  height: 36px;
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-sm);
+  line-height: 20px;
+}
+
+/* Text link (blue) */
+.link-blue {
+  color: var(--color-link);
+  font-weight: 500;
+  background: none;
+  padding: 0;
+}
+
+.link-blue:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+.cases {
+  background: var(--color-surface-alt);
+  padding: 80px 0;
+}
+
+.cases__heading {
+  margin: 0;
+  text-align: center;
+  color: #0a0a0a;
+  font-size: var(--font-lg);
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.cases__heading-accent {
+  color: var(--color-orange);
+}
+
+.cases__list {
+  margin-top: var(--spacing-2xl);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4xl);
+}
+
+.case-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-item__circle {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-full);
+  background: var(--color-case-circle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.case-item:hover .case-item__circle {
+  transform: scale(1.05);
+}
+
+.case-item__emoji {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.case-item__label {
+  color: var(--color-case-label);
+  font-size: var(--font-default);
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.cases__footer {
+  margin-top: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.cases__description {
+  color: var(--color-body);
+  font-size: var(--font-default);
+  line-height: 24px;
+  text-align: center;
+}

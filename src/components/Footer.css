@@ -1,0 +1,24 @@
+.site-footer {
+  background: var(--color-navy-deep);
+  padding: var(--spacing-lg) 0;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-footer__logo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.site-footer__copy {
+  padding-top: var(--spacing-xs);
+  color: var(--color-on-dark);
+  font-size: var(--font-sm);
+  line-height: 20px;
+  text-align: center;
+}

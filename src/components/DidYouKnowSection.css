@@ -1,0 +1,93 @@
+.know {
+  background: var(--color-didyouknow-bg);
+  padding: 80px 0;
+}
+
+.know__heading {
+  margin: 0;
+  text-align: center;
+  color: var(--color-heading);
+  font-size: var(--font-lg);
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.know__grid {
+  margin-top: var(--spacing-2xl);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+}
+
+.know-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.know-card:hover {
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
+}
+
+.know-card__media {
+  position: relative;
+  height: 160px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.know-card__media-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.know-card__media-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--overlay-blue);
+}
+
+.know-card__title {
+  margin: var(--spacing-sm) 0 0;
+  color: var(--color-heading);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: 17.5px;
+}
+
+.know-card__text {
+  padding: 12px 0 var(--spacing-sm);
+  color: var(--color-body);
+  font-size: var(--font-sm);
+  line-height: 22.75px;
+}
+
+.know-card .link-blue {
+  align-self: flex-start;
+  font-size: var(--font-sm);
+  line-height: 20px;
+  margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+  .know__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .know__grid {
+    grid-template-columns: 1fr;
+  }
+}
