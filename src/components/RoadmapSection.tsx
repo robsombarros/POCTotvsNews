@@ -1,4 +1,5 @@
 import "./RoadmapSection.css";
+import { asset } from "../config";
 
 export function RoadmapSection() {
   return (
@@ -12,7 +13,7 @@ export function RoadmapSection() {
         <div className="roadmap__grid">
           <article className="roadmap-card">
             <div className="roadmap-card__head">
-              <img src="/assets/icon-roadmap1.svg" alt="" width={48} height={48} />
+              <img src={asset("icon-roadmap1.svg")} alt="" width={48} height={48} />
               <div>
                 <h3 className="roadmap-card__title">PRODUTO E ROADMAP</h3>
               </div>
@@ -28,7 +29,7 @@ export function RoadmapSection() {
 
           <article className="roadmap-card">
             <div className="roadmap-card__head">
-              <img src="/assets/icon-roadmap2.svg" alt="" width={48} height={48} />
+              <img src={asset("icon-roadmap2.svg")} alt="" width={48} height={48} />
               <div>
                 <h3 className="roadmap-card__title">CENTRAL</h3>
                 <p className="roadmap-card__subtitle">NOTIFICAÇÕES</p>

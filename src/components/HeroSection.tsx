@@ -1,10 +1,11 @@
 import "./HeroSection.css";
+import { asset } from "../config";
 
 export function HeroSection() {
   return (
     <section className="hero">
       <div className="hero__bg" aria-hidden="true">
-        <img className="hero__bg-img" src="/assets/hero.png" alt="" />
+        <img className="hero__bg-img" src={asset("hero.png")} alt="" />
         <div className="hero__overlay" />
       </div>
 

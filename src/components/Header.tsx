@@ -1,4 +1,5 @@
 import "./Header.css";
+import { asset } from "../config";
 
 const NAV_LINKS = [
   { label: "VOCÊ SABIA?", href: "#voce-sabia" },
@@ -24,7 +25,7 @@ export function Header() {
         </nav>
 
         <button className="site-header__action" type="button" aria-label="Ajuda">
-          <img src="/assets/icon-menu.svg" alt="" width={20} height={20} />
+          <img src={asset("icon-menu.svg")} alt="" width={20} height={20} />
         </button>
       </div>
     </header>

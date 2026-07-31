@@ -1,4 +1,5 @@
 import "./VideoSection.css";
+import { asset } from "../config";
 
 interface VideoThumb {
   title: string;
@@ -35,7 +36,7 @@ export function VideoSection() {
           <div className="videos__featured">
             <div className="videos__featured-inner">
               <img
-                src="/assets/icon-video-play-big.svg"
+                src={asset("icon-video-play-big.svg")}
                 alt=""
                 width={64}
                 height={64}
@@ -52,7 +53,7 @@ export function VideoSection() {
               <button className="video-thumb" type="button" key={thumb.title}>
                 <span className="video-thumb__preview">
                   <img
-                    src="/assets/icon-video-play.svg"
+                    src={asset("icon-video-play.svg")}
                     alt=""
                     width={24}
                     height={24}

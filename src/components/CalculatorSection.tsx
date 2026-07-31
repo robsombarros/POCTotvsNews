@@ -1,4 +1,5 @@
 import "./CalculatorSection.css";
+import { asset } from "../config";
 
 export function CalculatorSection() {
   return (
@@ -8,7 +9,7 @@ export function CalculatorSection() {
           <div className="calculator__heading-row">
             <img
               className="calculator__icon"
-              src="/assets/icon-calc-title.svg"
+              src={asset("icon-calc-title.svg")}
               alt=""
             />
             <h2 className="calculator__heading">
@@ -33,12 +34,12 @@ export function CalculatorSection() {
         <div className="calculator__card">
           <img
             className="calculator__card-img"
-            src="/assets/calculator.png"
+            src={asset("calculator.png")}
             alt=""
           />
           <div className="calculator__card-overlay">
             <div className="calculator__card-content">
-              <img src="/assets/icon-calc-big.svg" alt="" width={64} height={64} />
+              <img src={asset("icon-calc-big.svg")} alt="" width={64} height={64} />
               <p className="calculator__card-label">Calculadora Interativa</p>
             </div>
           </div>

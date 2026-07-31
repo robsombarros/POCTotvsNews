@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { asset } from "../config";
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <div className="container site-footer__inner">
         <div className="site-footer__logo">
           <img
-            src="/assets/logo-totvs.svg"
+            src={asset("logo-totvs.svg")}
             alt="TOTVS"
             width={96}
             height={27}

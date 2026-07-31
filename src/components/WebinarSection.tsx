@@ -1,10 +1,11 @@
 import "./WebinarSection.css";
+import { asset } from "../config";
 
 export function WebinarSection() {
   return (
     <section className="webinar">
       <div className="webinar__bg" aria-hidden="true">
-        <img className="webinar__bg-img" src="/assets/webinar.png" alt="" />
+        <img className="webinar__bg-img" src={asset("webinar.png")} alt="" />
         <div className="webinar__overlay" />
       </div>
 
@@ -22,7 +23,7 @@ export function WebinarSection() {
       </div>
 
       <div className="webinar__decoration" aria-hidden="true">
-        <img src="/assets/icon-webinar.svg" alt="" width={96} height={96} />
+        <img src={asset("icon-webinar.svg")} alt="" width={96} height={96} />
       </div>
     </section>
   );
