@@ -1,67 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GetSession</title>
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; }
-    label { display: block; margin-bottom: 6px; font-weight: bold; }
-    input { width: 100%; padding: 8px; box-sizing: border-box; margin-bottom: 12px; }
-    button { padding: 8px 20px; cursor: pointer; }
-    button:disabled { cursor: not-allowed; opacity: .6; }
-    #status { margin-top: 16px; font-weight: bold; }
-    #status.erro { color: #b00020; }
-    pre { background: #f4f4f4; padding: 12px; white-space: pre-wrap; word-break: break-all; border-radius: 4px; }
-  </style>
-</head>
-<body>
-  <h1>GetSession</h1>
-
-  <label for="key">Key</label>
-  <input type="text" id="key" placeholder="Informe a key">
-  <button type="button" id="btn">Consultar</button>
-
-  <div id="status" role="status" aria-live="polite"></div>
-  <pre id="resultado" hidden></pre>
-
-  <script>
-    // Chama o servidor local (server.js), que repassa a requisição para a API
-    const BASE_URL = "https://sociedadede166423.rm.cloudtotvs.com.br/FrameHTML/rm/api/TOTVSEducacional/GetSession";
-    const keyInput = document.getElementById("key");
-    const btn = document.getElementById("btn");
-    const statusEl = document.getElementById("status");
-    const resultado = document.getElementById("resultado");
-
-    async function consultar() {
-      statusEl.className = "";
-      statusEl.textContent = "Processando...";
-      resultado.hidden = true;
-      btn.disabled = true;
-
-      try {
-        const url = BASE_URL + "?key=" + encodeURIComponent(keyInput.value);
-        const resp = await fetch(url);
-        const texto = await resp.text();
-
-        let saida = texto;
-        try { saida = JSON.stringify(JSON.parse(texto), null, 2); } catch (_) {}
-
-        statusEl.textContent = "HTTP " + resp.status + " " + resp.statusText;
-        if (!resp.ok) statusEl.className = "erro";
-        resultado.textContent = saida || "(resposta vazia)";
-        resultado.hidden = false;
-      } catch (e) {
-        statusEl.className = "erro";
-        statusEl.textContent = "Erro na requisição: " + e.message +
-          " (pode ser bloqueio de CORS ou falha de rede)";
-      } finally {
-        btn.disabled = false;
-      }
-    }
-
-    btn.addEventListener("click", consultar);
-    keyInput.addEventListener("keydown", e => { if (e.key === "Enter") consultar(); });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-totvs.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOTVS Educacional — Novidades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
